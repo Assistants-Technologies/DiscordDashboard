@@ -1,0 +1,60 @@
+/* 1) Core Tailwind */
+@import 'tailwindcss';
+@import 'tailwindcss/utilities';
+
+/* 2) Custom Components */
+@layer components {
+  /* gradient text */
+  .gradient-text {
+    /* red-500 → orange-500 → purple-700 */
+    background: linear-gradient(90deg, #ef4444, #f97316, #6d28d9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* browser window preview */
+  .browser-window {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .browser-header {
+    height: 40px;
+    background: #e5e7eb;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+  }
+  .browser-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+  }
+}
+
+/* 3) Custom Utilities */
+@layer utilities {
+  /* lift effect on feature cards */
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+            0 20px 25px -5px rgba(0, 0, 0, 0.1),
+            0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+}
+
+.sidebar-item.active {
+  background-color: #f3f4f6;
+  border-left: 3px solid #6d28d9;
+}
+
+.sidebar-item:hover:not(.active) {
+  background-color: #f9fafb;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
