@@ -5,8 +5,8 @@ import DashboardPageShell from "@/components/dashboard/DashboardPageShell";
 
 export default function DashboardPage() {
     return (
-        <DashboardPageShell>
-            <Header />
+        <DashboardPageShell activeItem="overview">
+            <Header/>
             <div className="mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
                 <StatsSection />
             </div>

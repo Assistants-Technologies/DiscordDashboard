@@ -3,12 +3,17 @@ import ThemeGrid from "@/components/dashboard/themes/ThemeGrid"
 
 import DashboardPageShell from "@/components/dashboard/DashboardPageShell"
 
-export default function StripeConnectPage() {
+import {Suspense} from "react";
+import Loading from "./loading";
+
+export default function ThemesPage() {
     return (
-        <DashboardPageShell>
+        <DashboardPageShell activeItem="themes">
             <Header />
             <div className="mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
-                <ThemeGrid />
+                <Suspense fallback={<p>Loading feed...</p>}>
+                    <ThemeGrid />
+                </Suspense>
             </div>
         </DashboardPageShell>
     )

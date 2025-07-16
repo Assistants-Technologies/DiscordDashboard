@@ -3,9 +3,9 @@ import Subscriptions from "@/components/dashboard/subscriptions/SubscriptionsSec
 
 import DashboardPageShell from "@/components/dashboard/DashboardPageShell"
 
-export default function StripeConnectPage() {
+export default async function SubscriptionsPage() {
     return (
-        <DashboardPageShell>
+        <DashboardPageShell activeItem="subscriptions">
             <Header />
             <div className="mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
                 <Subscriptions />

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export function Hero() {
     return (
-        <section className="container mx-auto px-6 py-16 md:py-24">
+        <section className="container mx-auto px-6 md:mt-28 mt-12 py-16 md:py-24">
             <div className="flex flex-col md:flex-row items-center">
                 {/* Text side */}
                 <motion.div

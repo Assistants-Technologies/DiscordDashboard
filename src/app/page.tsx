@@ -9,18 +9,22 @@ import { Marketplace } from '@/components/Marketplace'
 import { Testimonials } from '@/components/Testimonials'
 import { Support } from '@/components/Support'
 
+import { Providers } from '@/components/Providers'
+
 export default function Page() {
     return (
-        <main>
-            <Header />
-            <Hero />
-            <Features />
-            <StripeIntegration />
-            <Testimonials />
-            <Marketplace />
-            <Support />
-            <CTA />
-            <Footer />
-        </main>
+        <Providers>
+            <main>
+                <Header />
+                <Hero />
+                <Features />
+                <StripeIntegration />
+                <Testimonials />
+                <Marketplace />
+                <Support />
+                <CTA />
+                <Footer />
+            </main>
+        </Providers>
     )
 }
