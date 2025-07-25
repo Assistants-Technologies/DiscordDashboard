@@ -41,6 +41,8 @@ export default function IdentityProvider(
                 const res = await fetch(this.url, {
                     headers: { Authorization: `Bearer ${tokens.access_token}` },
                 })
+                console.log("userinfo response:", res.status, res.statusText)
+                console.log("access_token:", tokens.access_token)
                 if (!res.ok) throw new Error("userinfo failed: " + res.status)
                 return res.json() as Promise<CoreIdentityProfile>
             },

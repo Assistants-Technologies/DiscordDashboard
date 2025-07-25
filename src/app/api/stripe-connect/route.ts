@@ -1,4 +1,3 @@
-// app/api/stripe-connect/route.ts
 import { NextResponse } from 'next/server'
 import { auth } from '@/auth'
 import { StripeService } from '@/services/stripeService'

@@ -22,3 +22,15 @@ model StripeAccount {
 
   @@index([ssoUserId, environment])
 }
+
+model ApiToken {
+  id         String   @id @default(cuid())
+  tokenHash  String
+  userId     String
+  environment StripeEnvironment
+  createdAt  DateTime @default(now())
+  lastUsedAt DateTime?
+  name       String?
+
+  @@unique([userId, tokenHash, environment])
+}
